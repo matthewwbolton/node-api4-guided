@@ -8,7 +8,7 @@ router.use(express.json());
 
 router.get("/", (req, res) => {
   const message = process.env.MESSAGE || "hello from local host";
-  res.status(200).json({ api: "up" });
+  res.status(200).json({ api: "up", message });
 });
 
 router.get("/shouts", (req, res, next) => {
